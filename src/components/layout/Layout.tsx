@@ -1,13 +1,12 @@
 import NextHeadSeo from 'next-head-seo';
 
 import Footer from '@/components/uiGroup/Footer';
-import Header from '@/components/uiGroup/Header';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // サイトごとに設定値を変える
-const APP_NAME = '株式会社UnReact';
-const APP_ROOT_URL = 'https://unreact.jp'; // 末尾に `/` をつけない
-const APP_DEFAULT_DESCRIPTION = '株式会社UnReactのメタディスクリプションです。';
+const APP_NAME = 'Wedding Invitation';
+const APP_ROOT_URL = 'https://wedding.k12i.space'; // 末尾に `/` をつけない
+const APP_DEFAULT_DESCRIPTION = '';
 const APP_DEFAULT_OG_IMAGE_PATH = '/default-unreact.png';
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -71,9 +70,9 @@ const Layout = ({
         }}
       />
 
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1">{children}</main>
+      <div className="flex flex-col gap-8 items-center min-h-screen text-secondary bg-primary">
+        {/* <Header /> */}
+        <main className="flex flex-col grow gap-8 items-center w-full">{children}</main>
         <Footer />
       </div>
     </>

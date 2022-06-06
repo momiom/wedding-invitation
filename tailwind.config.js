@@ -27,9 +27,18 @@ module.exports = {
         primary: {
           // light: '',
           // medium: '',
-          DEFAULT: '#242424',
+          DEFAULT: '#eaddd2',
+          green: '#cbdbc8',
           // dark: '',
         },
+        secondary: {
+          DEFAULT: '#2c3e4d',
+        },
+        'tree-brown': '#a38c6b',
+        'tree-brown-dark': '#8c7c62',
+        'off-white': '#f2f2f2',
+        'off-black': '#333333',
+
         // サブカラー
         // secondary: {
         //   light: '',

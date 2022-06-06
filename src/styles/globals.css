@@ -4,6 +4,184 @@
 
 @layer base {
   body {
-    @apply font-ja leading-relaxed tracking-wider;
+    font-family: 'Libre Baskerville', 'Zen Maru Gothic', sans-serif;
+    font-weight: 400;
+    @apply text-sm;
   }
+}
+
+/* EyeCatch と MoveTitle のアニメーション */
+@keyframes sepia-to-color {
+  0% {
+    filter: grayscale(100%) brightness(300%) opacity(0%);
+    /* scale: 150%; */
+  }
+
+  30% {
+    filter: grayscale(100%) brightness(200%) opacity(0%);
+    /* scale: 150%; */
+  }
+
+  70% {
+    filter: grayscale(80%) brightness(100%) opacity(70%);
+    /* scale: 150%; */
+  }
+
+  90% {
+    filter: grayscale(0%) brightness(100%) opacity(100%);
+    /* scale: 110%; */
+  }
+
+  100% {
+    filter: grayscale(0%) brightness(100%) opacity(100%);
+    /* scale: 100%; */
+  }
+}
+.img-effect {
+  animation-name: sepia-to-color;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes border-appear {
+  0% {
+    padding: 0;
+    height: 680px;
+  }
+  70% {
+    padding: 0;
+    height: 680px;
+  }
+  100% {
+    padding: 8px 8px 72px 8px;
+    height: 650px;
+  }
+}
+.img-effect-wrapper {
+  animation-name: border-appear;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-fade-in {
+  0% {
+    opacity: 0%;
+    left: -100px;
+  }
+  80% {
+    opacity: 0%;
+    left: -100px;
+  }
+  100% {
+    opacity: 100%;
+    left: 4%;
+  }
+}
+.title-effect {
+  animation-name: slide-fade-in;
+  animation-duration: 5s;
+}
+
+/* 出欠席 */
+input[type='radio'] {
+  display: none;
+}
+input[type='radio'] + label {
+  display: inline-block;
+  font-size: 1.375rem;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  line-height: 90px;
+  cursor: pointer;
+}
+input[type='radio'][name='attendance'][value='true']:checked + label {
+  background: url(https://dear-guest.com/img/invitation/ashley/brown/rsvp_img_1@2x.png) no-repeat
+    center center;
+  background-size: contain;
+  color: #f2f2f2;
+  @apply transition duration-300 ease-in-out;
+}
+input[type='radio'][name='attendance'][value='false']:checked + label {
+  background: url(https://dear-guest.com/img/invitation/ashley/brown/rsvp_img_1@2x.png) no-repeat
+    center center;
+  background-size: contain;
+  color: #f2f2f2;
+  @apply transition duration-300 ease-in-out;
+}
+
+/* input のホーバー・フォーカス時に表示されるアイコンを消す */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
+  opacity: 0 !important;
+}
+input {
+  /* for Firefox */
+  -moz-appearance: none !important;
+  /* for Safari, Chrome, Opera */
+  -webkit-appearance: none !important;
+}
+/* for IE10 */
+input::-ms-expand {
+  display: none !important;
+}
+
+/* form */
+.font-form {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  @apply font-thin text-sm;
+}
+.font-form-title {
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
+/* input の装飾 */
+.input-text {
+  @apply block h-11 w-full rounded-md border border-gray-300 bg-gray-50 p-3 focus:border-tree-brown focus:ring-tree-brown font-thin;
+}
+.input-textarea {
+  @apply block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-tree-brown focus:ring-tree-brown;
+}
+.input-text-label {
+  @apply block font-light;
+}
+::placeholder {
+  @apply font-light;
+}
+
+input + .valid-check {
+  @apply absolute top-[8px] text-base right-2 h-7 w-7 rounded-full bg-gray-50 border border-black text-center opacity-25 transition duration-300 ease-in-out;
+}
+input:valid + .valid-check {
+  @apply border-green-500 text-green-500 opacity-100;
+}
+
+textarea {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  @apply font-thin text-base;
+}
+/* ローディングスピナー */
+.loading-spinner {
+  @apply inline-block w-[16px] h-[16px] rounded-full border-2 border-black/20 ml-2 border-t-secondary/70;
+  animation: loader-spin 1.2s infinite linear;
+}
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* フッター */
+footer {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  /* font-family: 'Libre Baskerville', sans-serif; */
+  @apply font-thin text-base;
 }
