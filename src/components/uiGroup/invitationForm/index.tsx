@@ -75,9 +75,11 @@ const InvitationForm = () => {
         {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
         <h2 className="py-8 text-3xl italic text-center font-form-title">rsvp</h2>
         <p className="px-4 pt-4 font-medium leading-8">
-          お手数ではございますが、出席情報のご登録をお願い申し上げます。
+          {/* eslint-disable-next-line no-irregular-whitespace */}
+          お手数ではございますが　出席情報のご登録をお願い申し上げます
           <br />
-          こちらでご登録いただいたご住所に招待状を送付させていただきます。
+          {/* eslint-disable-next-line no-irregular-whitespace */}
+          失礼ながら招待状を直接お渡しできない方には　こちらでご登録いただいたご住所に送付させていただきます
         </p>
 
         {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
