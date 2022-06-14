@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 const Message: FC = () => {
   const { ref, inView } = useInView({
     threshold: 0.6,
-    // triggerOnce: true,
+    triggerOnce: true,
   });
 
   return (

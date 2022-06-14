@@ -10,6 +10,12 @@
   }
 }
 
+.font-libre {
+  font-family: 'Libre Baskerville', sans-serif;
+}
+.font-zen {
+  font-family: 'Zen Maru Gothic', serif;
+}
 /* EyeCatch と MoveTitle のアニメーション */
 @keyframes sepia-to-color {
   0% {
