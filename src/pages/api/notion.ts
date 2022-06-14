@@ -48,6 +48,16 @@ function make(params: MainInput): Array<any> {
       database_id: process.env.NOTION_DATABASE_ID!,
     },
     properties: {
+      attendance: {
+        type: 'rich_text',
+        rich_text: [
+          {
+            text: {
+              content: params.attendance,
+            },
+          },
+        ],
+      },
       id: {
         type: 'rich_text',
         rich_text: [
