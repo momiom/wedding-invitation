@@ -16,7 +16,7 @@ const Message: FC = () => {
         }`}
       >
         <h2 className="text-5xl italic font-libre">event</h2>
-        <p className="text-lg">日時・会場</p>
+        
 
         <div
           ref={ref}
@@ -24,7 +24,7 @@ const Message: FC = () => {
             inView ? 'opacity-1' : 'opacity-0'
           }`}
         >
-          <p className="justify-self-center">日時・会場</p>
+          <p className="justify-self-center">日付</p>
           <p>2022.09.11 sun</p>
 
           <p className="justify-self-center">挙式</p>
@@ -32,6 +32,9 @@ const Message: FC = () => {
 
           <p className="justify-self-center">披露宴</p>
           <p>11:30</p>
+
+          <p className="justify-self-center">場所</p>
+          <p>Harmonie agréable</p>
         </div>
       </div>
     </>
