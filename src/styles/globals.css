@@ -197,3 +197,18 @@ footer {
   /* font-family: 'Libre Baskerville', sans-serif; */
   @apply font-thin text-base;
 }
+
+.map-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 7%;
+  width: 85%;
+  height: 100%;
+}
