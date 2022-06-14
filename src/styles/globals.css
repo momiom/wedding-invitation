@@ -82,6 +82,12 @@
   animation-duration: 5s;
 }
 
+/* 開催日時・場所 */
+.event-date {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  @apply text-base;
+}
+
 /* 出欠席 */
 input[type='radio'] {
   display: none;
